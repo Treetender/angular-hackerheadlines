@@ -15,6 +15,14 @@ export class NewsComponent implements OnInit {
   constructor(private service: NewsService) { }
 
   ngOnInit() {
+    this.getStories();
+  }
+
+  refreshStories() {
+    this.getStories();
+  }
+
+  private getStories() {
     this.service.getTopStoryIds().pipe().subscribe(
       (response) => {
         const ids = response;

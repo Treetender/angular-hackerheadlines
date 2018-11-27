@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatToolbarModule, MatIconModule, MatCardModule, MatDividerModule} from '@angular/material';
+import {MatToolbarModule, MatIconModule, MatCardModule, MatDividerModule, MatButtonModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { NewsComponent } from './news/news.component';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
