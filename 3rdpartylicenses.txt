@@ -352,12 +352,12 @@ THE SOFTWARE.
 
 @angular/material/card
 
-@angular/material/toolbar
-
-@angular/material/icon
-
 @angular/animations
 MIT
+
+@angular/material/button
+
+@angular/material/toolbar
 
 zone.js
 MIT
