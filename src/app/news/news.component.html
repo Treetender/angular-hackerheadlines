@@ -5,8 +5,11 @@
       <mat-card-title>{{story.title}}</mat-card-title>
       <mat-card-subtitle>{{story.by}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-actions>
-      <a href={{story.url}} target="_blank" mat-button>GO TO STORY</a>
+    <mat-card-content>
+      <div [innerHTML]="story.text" class="story-text"></div>
+    </mat-card-content> 
+    <mat-card-actions class="story-button">
+      <a *ngIf="story.url" href={{story.url}} target="_blank" mat-raised-button color="primary">GO TO STORY</a>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, from } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { NewsStory } from './news-story';
-import { switchMap, mergeMap } from 'rxjs/operators';
+import { mergeMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   getTopStoryIds(): Observable<number[]> {
-    return this.http.get<number[]>(NewsService.URL + 'topstories.json');
+    return this.http.get<number[]>(NewsService.URL + 'newstories.json');
   }
 
   getStoryDetails(storyId: number): Observable<NewsStory> {

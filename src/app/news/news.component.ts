@@ -28,7 +28,6 @@ export class NewsComponent implements OnInit {
         const ids = response;
         this.service.getTopStories(ids).pipe().subscribe(
           (story) => {
-            console.log(story);
             this.stories.push(story);
           }
         );

@@ -7,12 +7,21 @@ export class NewsStory {
     score: number;
     time: number;
     title: string;
+    text: string;
     type: string;
     url: string;
 
     constructor(
-        id: number, author: string, title: string, datePublished: number, score?: number, type?: string, 
-        url?: string, descendants?: number, relatedStoryIds?: number[]
+        id: number,
+        author: string,
+        title: string,
+        datePublished: number,
+        text: string,
+        score?: number,
+        type?: string,
+        url?: string,
+        descendants?: number,
+        relatedStoryIds?: number[]
     ) {
         this.id = id;
         this.by = author;
@@ -23,5 +32,6 @@ export class NewsStory {
         this.url = url;
         this.descendants = descendants;
         this.kids = relatedStoryIds;
+        this.text = text;
     }
 }
